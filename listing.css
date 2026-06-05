@@ -1,0 +1,123 @@
+/* ============================================================
+   NESTA — "A fairer start content hub" (listing page)
+   Layers on top of nesta.css — reuses its tokens & components.
+   ============================================================ */
+
+:root {
+  --line-warm: #d2c9c0;   /* content-panel border (rgb 210,201,192) */
+  --red:       #eb003b;   /* Apply-filters CTA (rgb 235,0,59) */
+  --red-deep:  #c30031;
+}
+
+/* ============================================================
+   HERO — content hub variant
+   ============================================================ */
+.hero--hub { min-height: 334px; display: flex; align-items: stretch; }
+.hub-hero { display: grid; grid-template-columns: 1fr 400px; align-items: center; min-height: 334px; position: relative; }
+.hub-hero .hero__copy { padding: 56px 0; }
+.hub-hero .crumb a { text-decoration: none; }
+.hub-hero .crumb a:hover { text-decoration: underline; color: var(--amber); }
+.hub-hero h1 { font-size: clamp(38px, 5vw, 55px); line-height: 1; margin-bottom: 16px; }
+.hub-lede { max-width: 655px; font-size: clamp(19px, 2vw, 24px); line-height: 1.3; }
+
+/* ---- stepped folded ribbon (top-right decorative graphic) ---- */
+.hub-art { position: relative; align-self: stretch; min-height: 334px; }
+.hub-art > span { position: absolute; display: block; }
+/* right orange leg (upper), folded bottom-left */
+.ra-legR { right: 0; top: 0; width: 90px; height: 179px; background: var(--amber);
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 90px), 0 100%); }
+/* purple bridge bar */
+.ra-bar { right: 90px; top: 90px; width: 208px; height: 90px; background: var(--lav); }
+/* left orange leg (lower), folded top-right */
+.ra-legL { right: 298px; top: 89px; width: 90px; height: 245px; background: var(--amber);
+  clip-path: polygon(0 90px, 100% 0, 100% 100%, 0 100%); }
+
+/* ============================================================
+   LISTING LAYOUT
+   ============================================================ */
+.listing { display: grid; grid-template-columns: 370px minmax(0, 1fr); align-items: start; }
+.listing-wrap { padding-block: 0; }
+
+/* ---- filter sidebar ---- */
+.filters { padding: 42px 70px 42px 0; }
+.filters__head { font-size: 18px; font-weight: 800; color: var(--grey); margin: 0 0 30px; letter-spacing: .01em; }
+.fgroup { margin-bottom: 30px; }
+.fgroup h3 { font-size: 18px; font-weight: 800; color: var(--navy); margin: 0 0 14px; letter-spacing: .01em; }
+.fopt { display: flex; gap: 12px; align-items: flex-start; padding: 7px 0; font-size: 16px; line-height: 1.3; color: var(--navy); cursor: pointer; }
+.fopt input { appearance: none; -webkit-appearance: none; flex: 0 0 18px; width: 18px; height: 18px; margin: 1px 0 0; border: 0; background: var(--blue); cursor: pointer; position: relative; border-radius: 0;
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 6px), calc(100% - 6px) 100%, 0 100%); }
+.fopt input::before { content: ""; position: absolute; inset: 0; background: #fff;
+  clip-path: polygon(8.33% 8.33%, 91.67% 8.33%, 91.67% 63.2%, 63.2% 91.67%, 8.33% 91.67%); }
+.fopt input:checked::before { background: var(--navy); }
+.fopt input:checked::after { content: ""; position: absolute; left: 4px; top: 1px; width: 5px; height: 10px; border: solid #fff; border-width: 0 2px 2px 0; transform: rotate(45deg); z-index: 1; }
+.fopt:hover input { background: var(--blue); }
+.fopt:hover input:checked::before { background: var(--blue); }
+.fopt:hover { color: var(--blue); }
+.fmore { display: inline-flex; align-items: center; gap: 9px; margin-top: 4px; font-size: 16px; font-weight: 600; color: var(--navy); text-decoration: none; }
+.fmore .i { width: 18px; height: 18px; flex: 0 0 18px; display: grid; place-items: center; border: 1.5px solid currentColor; border-radius: 50%; font-size: 11px; font-weight: 800; font-style: italic; }
+.fmore:hover { color: var(--blue); text-decoration: underline; text-underline-offset: 3px; }
+
+/* Apply filters — red CTA with folded ends */
+.btn-apply { display: inline-flex; align-items: center; cursor: pointer; margin-top: 16px;
+  font-family: var(--font-body); font-weight: 700; font-size: 18px; color: #fff; background: var(--red);
+  border: 0; padding: 14px 26px; text-decoration: none;
+  clip-path: polygon(0 0, calc(100% - 14px) 0, 100% 28%, 100% 100%, 14px 100%, 0 72%);
+  transition: background .2s var(--ease); }
+.btn-apply:hover { background: var(--red-deep); }
+
+/* ---- results panel ---- */
+.results { border: 0; border-left: 1px solid var(--line-warm); padding: 42px 70px 70px; display: flex; flex-direction: column; }
+.results__count { font-size: 18px; color: var(--grey); margin: 0 0 48px; }
+.results__count b { color: var(--navy); font-weight: 700; }
+
+/* meta line: Content type — Date */
+.meta { display: inline-flex; align-items: center; gap: 10px; font-size: 15px; letter-spacing: .02em; color: var(--grey); }
+.meta b { font-weight: 700; color: var(--grey); }
+.meta i { width: 10px; height: 1px; background: var(--grey); display: inline-block; }
+
+/* ---- featured cards ---- */
+.feat-list { display: flex; flex-direction: column; gap: 34px; margin-bottom: 60px; }
+.feat { position: relative; display: block; text-decoration: none; color: inherit; min-height: 222px; }
+.feat__top { position: absolute; top: 0; left: 0; right: 0; height: 36px; background: var(--amber); z-index: 1;
+  clip-path: polygon(36px 0, 100% 0, 100% 100%, 0 100%); }
+.feat__rail { position: absolute; top: 36px; left: 0; bottom: 0; width: 36px; background: var(--lav); z-index: 1; transition: background .2s var(--ease); }
+.feat:hover .feat__rail { background: var(--blue); }
+.feat__body { margin: 36px 0 0 36px; background: var(--mist); padding: 28px;
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 40px), calc(100% - 40px) 100%, 0 100%); }
+.feat__body h3 { font-family: var(--font-body); font-weight: 600; font-size: 23px; line-height: 1.25; color: var(--navy); margin: 0 0 12px; transition: color .2s var(--ease); }
+.feat:hover .feat__body h3 { color: var(--blue); text-decoration: underline; text-underline-offset: 3px; }
+.feat__body p { font-size: 18px; line-height: 1.55; color: var(--grey); margin: 0 0 16px; max-width: 64ch; }
+
+/* ---- compact list rows ---- */
+.row-list { display: flex; flex-direction: column; }
+.rowi { display: block; text-decoration: none; color: inherit; padding: 26px 0; border-top: 1px solid var(--line-warm); }
+.rowi:first-child { border-top: 0; padding-top: 0; }
+.rowi h3 { font-family: var(--font-body); font-weight: 600; font-size: 23px; line-height: 1.25; color: var(--navy); margin: 0 0 10px; transition: color .2s var(--ease); }
+.rowi:hover h3 { color: var(--blue); text-decoration: underline; text-underline-offset: 3px; }
+.rowi p { font-size: 18px; line-height: 1.55; color: var(--grey); margin: 0 0 14px; max-width: 74ch; }
+
+/* ---- pagination ---- */
+.pager { display: flex; align-items: center; gap: 8px; margin-top: 56px; flex-wrap: wrap; }
+.pager a { min-width: 30px; height: 34px; padding: 0 9px; display: grid; place-items: center; border: 1px solid var(--navy); background: #fff; font-family: var(--font-body); font-size: 13px; letter-spacing: .01em; color: var(--navy); text-decoration: none; transition: background .15s var(--ease), color .15s var(--ease); }
+.pager a:hover { background: var(--mist); }
+.pager a.is-active { background: var(--navy); color: #fff; }
+.pager .ellipsis { padding: 0 4px; color: var(--navy); font-size: 13px; }
+.pager a.pager__edge { padding: 0 14px; }
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 1080px) {
+  .hub-hero { grid-template-columns: 1fr 300px; }
+}
+@media (max-width: 920px) {
+  .hub-hero { grid-template-columns: 1fr; }
+  .hub-art { display: none; }
+  .listing { grid-template-columns: 1fr; }
+  .filters { padding: 0 0 40px; }
+  .results { padding: 32px 24px 48px; }
+}
+@media (max-width: 560px) {
+  .feat__body p { font-size: 16px; }
+  .rowi h3, .feat__body h3 { font-size: 20px; }
+}

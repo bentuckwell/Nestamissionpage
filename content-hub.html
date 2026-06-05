@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A fairer start content hub — Nesta</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;700;800&family=Mulish:wght@400;500;600;700;800&family=Schibsted+Grotesk:wght@400;700;800&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="nesta.css">
+<link rel="stylesheet" href="listing.css">
+</head>
+<body data-cards="plain" data-motion="on">
+
+<!-- ============ HEADER ============ -->
+<header class="site-head">
+  <div class="shell site-head__row">
+    <a class="brand" href="index.html" aria-label="Nesta home">
+      <img src="nesta-logo.png" alt="Nesta" width="140" height="37">
+    </a>
+
+    <nav class="nav" id="nav">
+      <div class="nav__item" data-menu>
+        <button class="nav__link" aria-haspopup="true" aria-expanded="false">Our mission
+          <svg class="caret" viewBox="0 0 12 8"><path d="M1 1.5 6 6.5 11 1.5" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+        </button>
+        <div class="nav__panel" role="menu">
+          <a href="index.html" role="menuitem">A fairer start<span>A fair chance for every child in the early years</span></a>
+          <a href="#" role="menuitem">A healthy life<span>Helping people live healthier lives</span></a>
+          <a href="#" role="menuitem">A sustainable future<span>Decarbonising household heating</span></a>
+        </div>
+      </div>
+      <div class="nav__item" data-menu>
+        <button class="nav__link" aria-haspopup="true" aria-expanded="false">About
+          <svg class="caret" viewBox="0 0 12 8"><path d="M1 1.5 6 6.5 11 1.5" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+        </button>
+        <div class="nav__panel" role="menu">
+          <a href="#" role="menuitem">Who we are<span>Our story, board and people</span></a>
+          <a href="#" role="menuitem">How we work<span>Innovation methods and practice</span></a>
+          <a href="#" role="menuitem">Work with us<span>Jobs and partnerships</span></a>
+        </div>
+      </div>
+      <div class="nav__item" data-menu>
+        <button class="nav__link" aria-haspopup="true" aria-expanded="false">Latest content
+          <svg class="caret" viewBox="0 0 12 8"><path d="M1 1.5 6 6.5 11 1.5" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+        </button>
+        <div class="nav__panel" role="menu">
+          <a href="#" role="menuitem">Reports<span>Evidence and analysis</span></a>
+          <a href="#" role="menuitem">Blogs<span>Views from our teams</span></a>
+          <a href="#" role="menuitem">Events<span>What's coming up</span></a>
+        </div>
+      </div>
+      <div class="nav__item"><a class="nav__link" href="#">Specialist enterprises</a></div>
+      <button class="nav__search" id="openSearch" aria-label="Search">
+        <svg width="20" height="20" viewBox="0 0 20 20"><circle cx="8.5" cy="8.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="m13.5 13.5 4.5 4.5" stroke="currentColor" stroke-width="2"/></svg>
+      </button>
+    </nav>
+    <button class="nav__burger" id="burger" aria-label="Menu">
+      <svg width="26" height="26" viewBox="0 0 26 26"><path d="M3 7h20M3 13h20M3 19h20" stroke="currentColor" stroke-width="2.2"/></svg>
+    </button>
+  </div>
+</header>
+
+<!-- search overlay -->
+<div class="search-veil" id="searchVeil">
+  <div class="search-box">
+    <form onsubmit="return false">
+      <svg width="30" height="30" viewBox="0 0 20 20" style="color:var(--blue)"><circle cx="8.5" cy="8.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="m13.5 13.5 4.5 4.5" stroke="currentColor" stroke-width="2"/></svg>
+      <input type="search" id="searchInput" placeholder="Search Nesta" autocomplete="off">
+      <button type="button" class="close" id="closeSearch" aria-label="Close">
+        <svg width="26" height="26" viewBox="0 0 26 26"><path d="M5 5l16 16M21 5 5 21" stroke="currentColor" stroke-width="2.2"/></svg>
+      </button>
+    </form>
+    <p class="hint">Try <b>early years</b>, <b>parenting support</b> or <b>family hubs</b> — press <b>Esc</b> to close.</p>
+  </div>
+</div>
+
+<!-- ============ HERO (content hub) ============ -->
+<section class="hero hero--hub">
+  <div class="shell hub-hero">
+    <div class="hero__copy">
+      <nav class="crumb"><a href="index.html">Home</a><span>/</span><a href="index.html">A fairer start</a><span>/</span></nav>
+      <h1>A fairer start <span style="color: var(--amber)">content hub</span></h1>
+      <p class="hero__lede hub-lede">Explore the latest reports, projects, blogs and tools from across the fairer start mission</p>
+    </div>
+    <div class="hub-art" aria-hidden="true">
+      <span class="ra-legR"></span>
+      <span class="ra-bar"></span>
+      <span class="ra-legL"></span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LISTING ============ -->
+<section class="section listing-wrap" style="padding-block:0">
+  <div class="shell listing">
+
+    <!-- filter sidebar -->
+    <aside class="filters">
+      <p class="filters__head" style="font-weight: 600">Filter by:</p>
+
+      <div class="fgroup">
+        <h3>Area of focus</h3>
+        <label class="fopt"><input type="checkbox" value="integrated-family-support"> Developing a new era of integrated family support</label>
+        <label class="fopt"><input type="checkbox" value="financial-support"> Improving financial support for families</label>
+        <label class="fopt"><input type="checkbox" value="parenting-support"> Scaling effective parenting support</label>
+        <label class="fopt"><input type="checkbox" value="early-education"> Improving the quality of early education and care</label>
+        <label class="fopt"><input type="checkbox" value="early-years-funding"> Advocating for early-years funding</label>
+        <a class="fmore" href="#" style="margin: 20px 0px 0px"><span class="i">i</span>More about areas of focus</a>
+      </div>
+
+      <div class="fgroup">
+        <h3>Content type</h3>
+        <label class="fopt"><input type="checkbox"> Projects</label>
+        <label class="fopt"><input type="checkbox"> Campaigns</label>
+        <label class="fopt"><input type="checkbox"> News and blogs</label>
+        <label class="fopt"><input type="checkbox"> Reports</label>
+        <label class="fopt"><input type="checkbox"> Features</label>
+        <label class="fopt"><input type="checkbox"> Toolkits</label>
+        <label class="fopt"><input type="checkbox"> Services</label>
+      </div>
+
+      <div class="fgroup">
+        <h3>Location</h3>
+        <label class="fopt"><input type="checkbox"> Wales</label>
+        <label class="fopt"><input type="checkbox"> Scotland</label>
+        <label class="fopt"><input type="checkbox"> England</label>
+        <label class="fopt"><input type="checkbox"> UK</label>
+      </div>
+
+      <button class="btn-apply" id="applyFilters" type="button">Apply filters</button>
+    </aside>
+
+    <!-- results -->
+    <div class="results">
+      <p class="results__count">Showing <b>1–10</b> of <b>376</b></p>
+
+      <!-- featured -->
+      <div class="feat-list">
+        <a class="feat reveal" href="https://engaging-parents.nesta.org.uk" target="_blank" rel="noopener">
+          <span class="feat__top"></span>
+          <span class="feat__rail"></span>
+          <div class="feat__body">
+            <h3>Parent engagement playbook</h3>
+            <p>A playbook of practical, evidence-informed ways to help local areas enable more parents to find, start and complete evidence-based parenting programmes.</p>
+            <span class="meta"><b>Project</b><i></i>2024</span>
+          </div>
+        </a>
+        <a class="feat reveal" href="https://www.nesta.org.uk/toolkit/how-does-early-education-and-care-affect-childrens-development/" target="_blank" rel="noopener">
+          <span class="feat__top"></span>
+          <span class="feat__rail"></span>
+          <div class="feat__body">
+            <h3>How does early education and care affect children’s development?</h3>
+            <p>Early childhood education and care has a substantial impact on how children grow, learn and go on to do at school — we explore why quality matters so much.</p>
+            <span class="meta"><b>Explainer</b><i></i>2023</span>
+          </div>
+        </a>
+      </div>
+
+      <!-- list -->
+      <div class="row-list">
+        <a class="rowi reveal" href="https://www.nesta.org.uk/fairer-start/" target="_blank" rel="noopener"><h3>Best Start in Life support</h3><p>Practical guidance, tailored support and online resources for local authorities implementing their Best Start in Life plans for the early years.</p><span class="meta"><b>Project</b><i></i>2025</span></a>
+        <a class="rowi reveal" href="https://engaging-parents.nesta.org.uk" target="_blank" rel="noopener"><h3>Increasing parents’ engagement with evidence-based parenting programmes</h3><p>Helping more parents find, start and complete the parenting programmes we know work, by understanding and removing the barriers to engagement.</p><span class="meta"><b>Project</b><i></i>2024</span></a>
+        <a class="rowi reveal" href="https://www.nesta.org.uk/fairer-start/" target="_blank" rel="noopener"><h3>Improving financial support for families</h3><p>Designing, testing and scaling ways to improve the financial support that reaches families with young children when they need it most.</p><span class="meta"><b>Project</b><i></i>2024</span></a>
+        <a class="rowi reveal" href="https://www.nesta.org.uk/fairer-start/" target="_blank" rel="noopener"><h3>Developing a new era of integrated family support</h3><p>Working with local areas to join up the services around families so that support is earlier, joined-up and easier to reach.</p><span class="meta"><b>Project</b><i></i>2024</span></a>
+        <a class="rowi reveal" href="https://www.nesta.org.uk/fairer-start/" target="_blank" rel="noopener"><h3>Advocating for a better early-years funding system</h3><p>Making the economic and moral case for investing earlier in children’s lives — and tracking where the money actually goes.</p><span class="meta"><b>Report</b><i></i>2023</span></a>
+        <a class="rowi reveal" href="https://www.nesta.org.uk/fairer-start/" target="_blank" rel="noopener"><h3>Family Hubs Pregnancy Grant Toolkit</h3><p>A practical guide to designing and delivering a pregnancy grant programme through your local family hubs network.</p><span class="meta"><b>Toolkit</b><i></i>2024</span></a>
+        <a class="rowi reveal" href="https://www.nesta.org.uk/fairer-start/" target="_blank" rel="noopener"><h3>Why do the early years matter so much for later life?</h3><p>The early years are a crucial period in which the foundations of physical, cognitive, emotional and social development are laid.</p><span class="meta"><b>Explainer</b><i></i>2023</span></a>
+        <a class="rowi reveal" href="https://www.nesta.org.uk/fairer-start/" target="_blank" rel="noopener"><h3>Supporting an effective market of parenting interventions</h3><p>Helping build a well-functioning market of effective, evidence-based parenting interventions that local areas can trust and adopt at scale.</p><span class="meta"><b>Project</b><i></i>2024</span></a>
+      </div>
+
+      <!-- pagination -->
+      <nav class="pager" aria-label="Pagination">
+        <a class="pager__edge" href="#" data-prev>Prev</a>
+        <a href="#" class="is-active" data-page>1</a>
+        <a href="#" data-page>2</a>
+        <a href="#" data-page>3</a>
+        <span class="ellipsis">…</span>
+        <a href="#" data-page>36</a>
+        <a href="#" data-page>37</a>
+        <a href="#" data-page>38</a>
+        <a class="pager__edge" href="#" data-next>Next</a>
+      </nav>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GET MORE ============ -->
+<section class="getmore">
+  <div class="shell getmore__grid">
+    <div class="reveal">
+      <h2>Get more from this mission</h2>
+      <div class="getmore__links">
+        <a class="gm-link" href="#">
+          <b>Subscribe to the Nesta edit <svg class="arr" width="16" height="13" viewBox="0 0 18 14"><path d="M1 7h15M11 1l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2"/></svg></b>
+          <p>Get latest insights, opportunities and analysis from Nesta and the innovation sector</p>
+        </a>
+        <a class="gm-link" href="#">
+          <b>Visit our LinkedIn mission page <svg class="arr" width="16" height="13" viewBox="0 0 18 14"><path d="M1 7h15M11 1l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2"/></svg></b>
+          <p>Lorem ipsum dolor sit amet consectetur. Sed eu velit mattis vitae mauris gravida sit</p>
+        </a>
+        <a class="gm-link" href="#">
+          <b>Get in touch <svg class="arr" width="16" height="13" viewBox="0 0 18 14"><path d="M1 7h15M11 1l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2"/></svg></b>
+          <p>Lorem ipsum dolor sit amet consectetur. Sed eu velit mattis vitae mauris gravida sit</p>
+        </a>
+      </div>
+    </div>
+    <div class="portal" aria-hidden="true">
+      <div class="portal__inner">
+        <div class="portal__top"></div>
+        <div class="leg leg--l"></div>
+        <div class="leg leg--r"></div>
+        <div class="portal__bot"></div>
+      </div>
+      <div class="portal__sq"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="foot">
+  <div class="shell">
+    <div class="foot__top">
+      <div class="foot__social">
+        <a href="#" aria-label="X"><svg width="18" height="18" viewBox="0 0 18 18" fill="currentColor"><path d="M13.5 1.5h2.7l-5.9 6.7 6.9 9.1h-5.4l-4.2-5.5-4.8 5.5H0.1l6.3-7.2L-.3 1.5h5.6l3.8 5.1 4.4-5.1Zm-1 14.2h1.5L4.9 3.1H3.3l9.2 12.6Z"/></svg></a>
+        <a href="#" aria-label="Bluesky"><svg width="18" height="18" viewBox="0 0 18 18" fill="currentColor"><path d="M9 7.3C7.9 5.2 5 1.6 2.6 1.1.4.6 0 2 .4 3.8c.4 1.8 2.3 6.4 3.2 7.5.4.5 1 .9 1.7 1-1 .2-2 .4-1.2 2.6.9 2.3 3.9-1 5-2.8 1.1 1.8 4.1 5.1 5 2.8.8-2.2-.2-2.4-1.2-2.6.7-.1 1.3-.5 1.7-1 .9-1.1 2.8-5.7 3.2-7.5C18 2 17.6.6 15.4 1.1 13 1.6 10.1 5.2 9 7.3Z"/></svg></a>
+        <a href="#" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 18 18" fill="currentColor"><path d="M10.5 18v-7h2.3l.4-2.8h-2.7V6.4c0-.8.2-1.4 1.4-1.4h1.4V2.6c-.7-.1-1.4-.1-2.1-.1-2.1 0-3.5 1.3-3.5 3.6v2.1H5.3V11h2.3v7h2.9Z"/></svg></a>
+        <a href="#" aria-label="LinkedIn"><svg width="18" height="18" viewBox="0 0 18 18" fill="currentColor"><path d="M4.2 6H1V18h3.2V6ZM2.6 1.2A1.9 1.9 0 1 0 2.6 5a1.9 1.9 0 0 0 0-3.8ZM17 18h-3.2v-5.9c0-1.4 0-3.2-2-3.2s-2.3 1.5-2.3 3.1V18H6.4V6h3v1.6h.1c.4-.8 1.5-1.7 3-1.7 3.2 0 3.8 2.1 3.8 4.9V18Z"/></svg></a>
+        <a href="#" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="1.5" y="1.5" width="15" height="15" rx="4.5"/><circle cx="9" cy="9" r="3.6"/><circle cx="13.4" cy="4.6" r="1" fill="currentColor" stroke="none"/></svg></a>
+      </div>
+      <nav class="foot__nav">
+        <a href="#">Press</a><a href="#">Jobs</a><a href="#">Privacy</a><a href="#">Terms of use</a><a href="#">Accessibility</a><a href="#">Contact us</a>
+      </nav>
+    </div>
+    <div class="foot__legal">
+      <p><b>© 2026 Nesta.</b> Nesta is a registered charity in England and Wales 1144091 and Scotland SC042833.</p>
+      <p>Our main address is 58 Victoria Embankment, London, EC4Y 0DS. You can reach us by phone on 020 7438 2500 or drop us a line at information@nesta.org.uk.</p>
+      <p>All our work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License, unless it says otherwise. We hope you find it useful.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ TWEAKS ============ -->
+<div id="tweaks">
+  <header id="twDrag"><b>Tweaks</b><button id="twClose" aria-label="Close">✕</button></header>
+  <div class="body">
+    <div class="tw-group">
+      <label>Accent colour</label>
+      <div class="tw-sw" data-tw="accent">
+        <button data-v="#fdb633" data-deep="#e89a1c" style="background:#fdb633" class="on" aria-label="Amber"></button>
+        <button data-v="#a59bee" data-deep="#8d80e8" style="background:#a59bee" aria-label="Lavender"></button>
+        <button data-v="#0000ff" data-deep="#0000cc" style="background:#0000ff" aria-label="Blue"></button>
+        <button data-v="#19b57a" data-deep="#0f8a5b" style="background:#19b57a" aria-label="Green"></button>
+      </div>
+    </div>
+    <div class="tw-group">
+      <label>Heading font</label>
+      <div class="tw-seg" data-tw="font">
+        <button data-v='"Zosia", "Hanken Grotesk", sans-serif' class="on">Brand</button>
+        <button data-v='"Hanken Grotesk", sans-serif'>Hanken</button>
+        <button data-v='"Space Grotesk", sans-serif'>Space</button>
+      </div>
+    </div>
+    <div class="tw-group">
+      <label>Card hover</label>
+      <div class="tw-seg" data-tw="cards">
+        <button data-v="plain" class="on">Plain</button>
+        <button data-v="lift">Lift</button>
+        <button data-v="outline">Outline</button>
+      </div>
+    </div>
+    <div class="tw-group">
+      <label>Motion</label>
+      <div class="tw-seg" data-tw="motion">
+        <button data-v="on" class="on">On</button>
+        <button data-v="off">Off</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="image-slot.js"></script>
+<script src="nesta.js"></script>
+<script>
+  // pagination active state
+  document.querySelectorAll('.pager [data-page]').forEach(function (a) {
+    a.addEventListener('click', function (e) {
+      e.preventDefault();
+      document.querySelectorAll('.pager [data-page]').forEach(function (x) { x.classList.remove('is-active'); });
+      a.classList.add('is-active');
+      window.scrollTo({ top: document.querySelector('.results').offsetTop - 90, behavior: 'smooth' });
+    });
+  });
+  var apply = document.getElementById('applyFilters');
+  function updateApplyLabel() {
+    var n = document.querySelectorAll('.filters input:checked').length;
+    apply.textContent = n ? 'Apply filters (' + n + ')' : 'Apply filters';
+  }
+  if (apply) apply.addEventListener('click', updateApplyLabel);
+
+  // pre-apply Area-of-focus filter from ?focus= query param (set by homepage cards)
+  (function () {
+    var params = new URLSearchParams(window.location.search);
+    var focus = params.get('focus');
+    if (!focus) return;
+    var box = document.querySelector('.filters input[value="' + focus.replace(/"/g, '') + '"]');
+    if (!box) return;
+    box.checked = true;
+    updateApplyLabel();
+    // surface the active filter near the count
+    var name = box.parentElement.textContent.trim();
+    var count = document.querySelector('.results__count');
+    if (count) count.insertAdjacentHTML('beforeend',
+      ' &middot; filtered by <b>' + name + '</b>');
+    // bring the results into view
+    requestAnimationFrame(function () {
+      window.scrollTo({ top: (document.querySelector('.listing-wrap').offsetTop - 80), behavior: 'smooth' });
+    });
+  })();
+
+</script>
+</body>
+</html>
